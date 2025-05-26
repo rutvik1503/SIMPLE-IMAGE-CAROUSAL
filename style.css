@@ -92,6 +92,9 @@ body {
 }
 
 @media (max-width: 480px) {
+  .mian{
+    min-height: 90vh;
+  }
   .main button {
     font-size: 1rem;
     padding: 0.8rem 1.5rem;
