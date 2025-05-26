@@ -1,0 +1,99 @@
+/* Reset padding, margin and set box-sizing for all elements */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Set a gradient background for the whole body */
+body {
+  background: linear-gradient(135deg, #000000, #434343);
+  font-family: sans-serif;
+}
+
+/* Main container setup with flexbox to center items and spacing */
+.main {
+  width: 100%;
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: center; 
+  padding: 5vw;
+  gap: 3vw;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease-in-out;
+}
+
+/* Animation for zoom out */
+@keyframes opacity {
+  from {
+    /* transform: scale(1.1); */
+    opacity: 0.25;
+  }
+  to {
+    /* transform: scale(1); */
+    opacity: 1;
+  }
+}
+
+/* Image container styling */
+.main .image {
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 16 / 9;
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  animation: opacity 2s ease forwards;
+}
+
+/* Styling for the navigation buttons */
+.main button {
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(5px);
+  padding: 1rem 2rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* Button hover effect */
+.main button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    padding: 10vw 5vw;
+    gap: 6vw;
+  }
+
+  .main .image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+
+  .main button {
+    width: 100%;
+    max-width: 300px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
