@@ -92,8 +92,8 @@ body {
 }
 
 @media (max-width: 480px) {
-  .mian{
-    min-height: 90vh;
+  .main{
+    height: 90vh;
   }
   .main button {
     font-size: 1rem;
