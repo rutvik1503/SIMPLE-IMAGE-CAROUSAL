@@ -14,7 +14,7 @@ body {
 /* Main container setup with flexbox to center items and spacing */
 .main {
   width: 100%;
-  min-height: 100vh; /* Full viewport height */
+  min-height: 90vh; /* Full viewport height */
   display: flex;
   flex-wrap: wrap;
   justify-content: center; 
